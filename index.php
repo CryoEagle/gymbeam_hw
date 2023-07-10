@@ -196,9 +196,13 @@ $finalProducts = determineSentimentScore($products);
 $mostPositive = findMostPositive($finalProducts);
 $mostNegative = findMostNegative($finalProducts);
 
-echo("Nejvíce pozitivní: " . $finalProducts[$mostPositive]->name);
+if ($mostPositive != -1) {
+    echo("Nejvíce pozitivní: " . $finalProducts[$mostPositive]->name);
+}
 echo("<br/>");
-echo("Nejvíce negativní: " . $finalProducts[$mostNegative]->name);
+if ($mostNegative != -1) {
+    echo("Nejvíce negativní: " . $finalProducts[$mostNegative]->name);
+}
 
 renderData($finalProducts);
 print($mostNegative);
