@@ -66,7 +66,7 @@ function determineSentimentScore($products)
         try {
             $response = $client->request('POST', 'https://api-inference.huggingface.co/models/ProsusAI/finbert', [
                 'headers' => [
-                    'Authorization' => 'Bearer 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'
+                    'Authorization' => 'Bearer secretkey'
                 ],
                 'body' => json_encode([
                     'inputs' => $item->description
